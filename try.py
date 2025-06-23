@@ -1,0 +1,22 @@
+from model_factory.mode_factory import AI
+
+
+ai = AI()
+ai.create_model("test_01")
+response = ai.invoke("我叫xiaojiang，你是谁？")
+print(response)
+print("-------------------")
+response = ai.invoke("我喜欢蓝色，你喜欢什么颜色？")
+print(response)
+print("-------------------")
+response = ai.invoke("你能告诉我一些关于Python的信息吗？")
+print(response)
+print("-------------------")
+response = ai.invoke("你能帮我写一个简单的Python程序吗？")
+print(response)
+print("-------------------")
+response = ai.invoke("你能告诉我一些关于机器学习的知识吗？")
+print(response)
+print("-------------------")
+response = ai.invoke("你能总结一下我们的对话吗？")
+print(response)
