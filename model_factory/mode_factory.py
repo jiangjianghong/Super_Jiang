@@ -92,10 +92,10 @@ class AI:
             self.message_history.append({"role": "assistant", "content": assistant_message})
             return assistant_message
 
-    def single_invoke(self, user_mes: str, stream: bool = False, **kwargs):
+    def single_invoke(self, sys_prompt: str, user_mes: str, stream: bool = False, **kwargs):
         """单次对话，不保存历史记录，支持流式输出"""
         messages = [
-            {"role": "system", "content": self.prompt},
+            {"role": "system", "content": sys_prompt},
             {"role": "user", "content": user_mes}
         ]
         

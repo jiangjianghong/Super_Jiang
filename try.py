@@ -1,14 +1,24 @@
 from model_factory.mode_factory import AI
-import time
-
+from prompt_factory.prompt_base import get_prompt_base
+import json
+from tools_factory.tools import execute_tool
 
 ai = AI()
 ai.create_model("test_01")
+prompt = get_prompt_base()
+# print(f"提示词为：\n {prompt} \n")
+ai.set_prompt(prompt)
 
-user_message_1 = "你需要用最快的速度一次性返回一个一万字的故事，故事内容是：6 。不要有空行，不要有换行符，直接返回一万字的故事。"
-print(f"--- 尝试调用 ai.invoke('{user_message_1}', stream=False) ---")
-response = ai.invoke(user_message_1, stream=True) 
-for chunk in response:
-    print(f"{chunk}", end='', flush=True)
-    time.sleep(0.1)  # 模拟流式输出的延迟
+response = ai.invoke("小米su7的颜色")
+response_json = json.loads(response)
+print(f"大模型输出为:\n {response_json}\n")
+for key in response_json:
+    if key == "tool":
+        tools_name = response_json["tool"]
+        tools_args = response_json["args"]
+        tools_res = execute_tool(tools_name, tools_args)
+        print(tools_res)
+
+
+
 
