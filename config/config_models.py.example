@@ -1,0 +1,17 @@
+# 存储模型的配置 - 模板文件
+# 使用说明：
+# 1. 复制此文件为 config_models.py
+# 2. 将下面的占位符替换为你的实际配置信息
+
+MODELS_CONFIG = {
+    "model_name_1": {
+        "model_name": "your-model-name",  # 如：qwen-turbo-latest, gpt-3.5-turbo
+        "base_url": "your-api-base-url",  # 如：https://api.openai.com/v1
+        "api_key": "your-api-key-here"    # 你的API密钥
+    },
+    "model_name_2": {
+        "model_name": "another-model-name",
+        "base_url": "another-api-base-url",
+        "api_key": "another-api-key"
+    }
+}
