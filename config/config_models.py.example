@@ -4,9 +4,9 @@
 # 2. 将下面的占位符替换为你的实际配置信息
 
 MODELS_CONFIG = {
-    "model_name_1": {
-        "model_name": "your-model-name",  # 如：qwen-turbo-latest, gpt-3.5-turbo
-        "base_url": "your-api-base-url",  # 如：https://api.openai.com/v1
+    "test_01": {
+        "model_name": "qwen-turbo-latest",  # 模型名称
+        "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",  # API基础URL
         "api_key": "your-api-key-here"    # 你的API密钥
     },
     "model_name_2": {

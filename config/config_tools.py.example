@@ -1,0 +1,19 @@
+import os
+
+# 工具配置 - 模板文件
+# 使用说明：
+# 1. 复制此文件为 config_tools.py
+# 2. 将下面的占位符替换为你的实际API密钥
+
+TOOLS_CONFIG = {
+    "websearch": {
+        "api_key": "your-websearch-api-key-here"  # Google Custom Search API密钥
+    },
+    "weather": {
+        "api_key": "your-weather-api-key-here"    # 天气API密钥
+    },
+    "translator": {
+        "api_key": "your-translator-api-key-here" # 翻译API密钥
+    }
+    # 可以继续添加其他工具的配置...
+}
