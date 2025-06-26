@@ -7,7 +7,8 @@ import os
 
 TOOLS_CONFIG = {
     "websearch": {
-        "api_key": "your-websearch-api-key-here"  # Google Custom Search API密钥
+        "api_key": "your-websearch-api-key-here",  # Google Custom Search API密钥
+        "search_engine_id": "your-search-engine-id-here"  # Google Custom Search引擎ID
     },
     "weather": {
         "api_key": "your-weather-api-key-here"    # 天气API密钥
